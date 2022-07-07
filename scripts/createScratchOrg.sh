@@ -16,4 +16,9 @@ sfdx force:org:create -a $SCRATCH_ORG_ALIAS -s -f ./config/project-scratch-def.j
 
 echo "Pushing changes to scratch org..."
 sfdx force:source:push
-# to update more
+
+# to generate password use:
+# sfdx force:user:password:generate -u SCRATCH_ORG_ALIAS
+
+# to view password use:
+# sfdx force:user:display -u SCRATCH_ORG_ALIAS
