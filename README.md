@@ -25,3 +25,9 @@ use `sfdx force:user:password:generate -u <OrgName>`
 
 ## To View User Detail Of Scratch Org
 use `sfdx force:user:display -u <OrgName>`
+
+## To Push Data To Scratch Org
+use `sfdx force:source:push`
+
+## To Pull Data To Scratch Org
+use `sfdx force:source:pull`
