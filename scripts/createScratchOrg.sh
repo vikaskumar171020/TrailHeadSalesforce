@@ -1,12 +1,12 @@
 # this is use to create a new scratchorg and delete old scratch org
 # !bin/bash
-dev_hub_alias = "vikaskumar171020@wise-unicorn-51gmzk.com"
-scratch_org_alias = "TrailHeadOrg"
+DEV_HUB_ALIAS="vikaskumar171020@wise-unicorn-51gmzk.com"
+SCRATCH_ORG_ALIAS="TrailHeadOrg"
 
-echo "set default dev hub user:" $dev_hub_alias
-sfdx force:config:set defaultdevhubusername = $dev_hub_alias
+echo "set default dev hub user:" $DEV_HUB_ALIAS
+sfdx force:config:set defaultdevhubusername=$DEV_HUB_ALIAS
 
-echo "deleting old scratch org:"$scratch_org_alias
+echo "deleting old scratch org:" $SCRATCH_ORG_ALIAS
 sfdx force:org:delete -p -u $scratch_org_alias
 
 echo "creating new scratch org..."
