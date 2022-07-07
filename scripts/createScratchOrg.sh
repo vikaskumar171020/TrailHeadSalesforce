@@ -20,5 +20,11 @@ sfdx force:source:push
 # to generate password use:
 # sfdx force:user:password:generate -u SCRATCH_ORG_ALIAS
 
+# to pull data from org use:
+# sfdx force:source:pull
+
+#to push data to org with overwrtie use:
+# sfdx force:source:push -f
+
 # to view password use:
 # sfdx force:user:display -u SCRATCH_ORG_ALIAS
