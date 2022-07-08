@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEV_HUB_ALIAS="vikaskumar171020@wise-unicorn-51gmzk.com"    #your username
-SCRATCH_ORG_ALIAS="TrailHeadOrg"               #your scratch org name
+DEV_HUB_ALIAS=""    #your username
+SCRATCH_ORG_ALIAS=""    #your scratch org name
 
 
 echo "set default devhub user :" $DEV_HUB_ALIAS
