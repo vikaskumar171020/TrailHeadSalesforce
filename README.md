@@ -17,4 +17,17 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 
-# Requirement For Scratch Org Creation
+## Requirement For Scratch Org Creation
+- Dev-Hub need to enable in your org
+- You cannot enable Dev-Hub with namespace
+### To Generate Password Of Scratch Org
+use `sfdx force:user:password:generate -u <OrgName>`
+
+### To View User Detail Of Scratch Org
+use `sfdx force:user:display -u <OrgName>`
+
+### To Push Data To Scratch Org
+use `sfdx force:source:push`
+
+### To Pull Data To Scratch Org
+use `sfdx force:source:pull`
