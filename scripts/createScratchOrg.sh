@@ -24,4 +24,4 @@ echo "Generating Password for org :" $SCRATCH_ORG_ALIAS
 sfdx force:user:password:generate -u $SCRATCH_ORG_ALIAS
 
 echo "Getting Password from org :" $SCRATCH_ORG_ALIAS
-sfdx force:user:display -u $SCRATCH_ORG_ALIAS --json > user.json
+sfdx force:user:display -u $SCRATCH_ORG_ALIAS --json > ../user.json
