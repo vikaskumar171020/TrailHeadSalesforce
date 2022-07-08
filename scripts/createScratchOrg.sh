@@ -11,20 +11,17 @@ echo "deleting old scratch org :" $SCRATCH_ORG_ALIAS
 sfdx force:org:delete -p -u $SCRATCH_ORG_ALIAS
 rm -rf ./.sfdx/orgs
 
-echo "Creating scratch ORG..."
+echo "Creating scratch org..."
 sfdx force:org:create -a $SCRATCH_ORG_ALIAS -s -f ./config/project-scratch-def.json -d 30
 
 echo "Pushing changes to scratch org..."
-sfdx force:source:push
+sfdx force:source:push -f
 
-# to generate password use:
-# sfdx force:user:password:generate -u SCRATCH_ORG_ALIAS
+echo "Pulling changes from scratch org..."
+sfdx force:source:pull
 
-# to pull data from org use:
-# sfdx force:source:pull
+echo "Generating Password for org :" $SCRATCH_ORG_ALIAS
+sfdx force:user:password:generate -u $SCRATCH_ORG_ALIAS
 
-#to push data to org with overwrtie use:
-# sfdx force:source:push -f
-
-# to view password use:
-# sfdx force:user:display -u SCRATCH_ORG_ALIAS
+echo "Getting Password from org :" $SCRATCH_ORG_ALIAS
+sfdx force:user:display -u $SCRATCH_ORG_ALIAS --json > user.json

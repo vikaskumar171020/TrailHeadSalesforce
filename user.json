@@ -1,0 +1,18 @@
+{
+  "status": 0,
+  "result": {
+    "accessToken": "00D0p0000001T5h!ARMAQLM1PUlCQbXCWnHsI9.EWNZpp3K3VXTfP6AvUgE4e07edQ8xFMDDuesswf4RoVHSEOPPiLzn6oSgMR.uAaLxdHszbrsb",
+    "id": "0050p0000041HWwAAM",
+    "instanceUrl": "https://connect-computing-8995-dev-ed.my.salesforce.com",
+    "loginUrl": "https://CS74.salesforce.com",
+    "orgId": "00D0p0000001T5hEAE",
+    "profileName": "System Administrator",
+    "username": "test-2zpb6g2z11fc@example.com",
+    "alias": "TrailHeadOrg",
+    "password": "fcoJq2qc[mure"
+  },
+  "warnings": [
+    "The --targetdevhubusername flag is deprecated and will be removed in v57 or later.",
+    "This command will expose sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended access and escalation of privilege.\nFor additional information, please review the authorization section of the https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm"
+  ]
+}
