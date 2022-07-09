@@ -23,6 +23,7 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 **Note** 
 before running createScratch.sh file first authorize dev-hub org
+
 ### To Generate Password Of Scratch Org
 use `sfdx force:user:password:generate -u <OrgName>`
 
