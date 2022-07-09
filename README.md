@@ -20,6 +20,10 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## Requirement For Scratch Org Creation
 - Dev-Hub need to enable in your org
 - You cannot enable Dev-Hub with namespace
+
+**Note** 
+before running createScratch.sh file first authorize dev-hub org
+
 ### To Generate Password Of Scratch Org
 use `sfdx force:user:password:generate -u <OrgName>`
 
