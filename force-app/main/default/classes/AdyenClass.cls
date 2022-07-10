@@ -33,6 +33,9 @@ public class AdyenClass {
         return response;
     }
 
+    public static void TransactionHistory() {
+    }
+
     public static void JsonWrapper(HttpResponse response) {
         Map<String,Object> body = (Map<String,Object>)JSON.deserializeUntyped(response.getBody());
         System.debug(body);
