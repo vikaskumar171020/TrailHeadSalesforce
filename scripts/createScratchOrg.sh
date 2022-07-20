@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEV_HUB_ALIAS=""    #your username
-SCRATCH_ORG_ALIAS=""    #your scratch org name
+DEV_HUB_ALIAS="vikastextile@textile.com"    #your username
+SCRATCH_ORG_ALIAS="TestScratchOrg"    #your scratch org name
 
 
 echo "set default devhub user :" $DEV_HUB_ALIAS
@@ -24,4 +24,7 @@ echo "Generating Password for org :" $SCRATCH_ORG_ALIAS
 sfdx force:user:password:generate -u $SCRATCH_ORG_ALIAS
 
 echo "Getting Password from org :" $SCRATCH_ORG_ALIAS
-sfdx force:user:display -u $SCRATCH_ORG_ALIAS --json > ../user.txt
+sfdx force:user:display -u $SCRATCH_ORG_ALIAS --json > ../UserTrailHead.txt
+
+echo "Opening scratch org:" $SCRATCH_ORG_ALIAS
+sfdx force:org:open
