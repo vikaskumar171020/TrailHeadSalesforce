@@ -1,16 +1,8 @@
-public with sharing class OpportunityControllerVFPage {
-    public Opportunity Opp {get;set;}
-    public List<Opportunity> OppLis {get;set;}
-    public OpportunityControllerVFPage() {
-        Opp = new Opportunity();
-        OppLis = new List<Opportunity>();
-    }
-
-    public void ShowOpp() {
-        if(Opp.StageName == 'Prospecting'){
-            OppLis = [SELECT Name,StageName FROM Opportunity where StageName= 'Prospecting' LIMIT 2];
-        }else {
-            OppLis = [SELECT Name,StageName FROM Opportunity LIMIT 2];
-        }
+global with sharing class OpportunityControllerVFPage {
+    global static List<Contact> OppLis {get;set;}
+    global OpportunityControllerVFPage() {
+        // OppLis = [SELECT Name,StageName,CloseDate FROM Opportunity WITH SECURITY_ENFORCED];
+        OppLis = [SELECT Name FROM Contact WITH SECURITY_ENFORCED];
+        System.debug(OppLis);
     }
 }

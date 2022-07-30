@@ -1,14 +1,10 @@
 <apex:page sidebar="false" controller="OpportunityControllerVFPage" cache="false">
     <apex:form>
         <apex:pageBlock>
-            <apex:pageBlockSection>
-                <apex:inputField value="{!Opp.StageName}">
-                    <apex:actionSupport event="onchange" action="{!ShowOpp}" reRender="vf"/>
-                </apex:inputField>
-            </apex:pageBlockSection>
-            <apex:pageBlockTable value="{!OppLis}" var="opp" id="vf" >
-                <apex:column value="{!opp.Name}"></apex:column>
-                <apex:column value="{!opp.StageName}"></apex:column>
+            <apex:pageBlockTable value="{!OppLis}" var="opp" >
+                <apex:column value="{!opp.Name}"/>
+                <apex:column value="{!opp.StageName}"/>
+                <apex:column value="{!opp.Closedate}" />
             </apex:pageBlockTable>
         </apex:pageBlock>
     </apex:form>
