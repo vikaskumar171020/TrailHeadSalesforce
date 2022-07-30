@@ -40,3 +40,4 @@ $RECYCLE.BIN/
 .env
 **/scripts/
 **/profiles/
+**/user.json

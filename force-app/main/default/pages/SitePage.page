@@ -1,6 +1,15 @@
-<apex:page>
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page
-<!-- End Default Content REMOVE THIS -->
+<apex:page sidebar="false" controller="OpportunityControllerVFPage" cache="false">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection>
+                <apex:inputField value="{!Opp.StageName}">
+                    <apex:actionSupport event="onchange" action="{!ShowOpp}" reRender="vf"/>
+                </apex:inputField>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!OppLis}" var="opp" id="vf" >
+                <apex:column value="{!opp.Name}"></apex:column>
+                <apex:column value="{!opp.StageName}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
 </apex:page>
