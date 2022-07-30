@@ -1,5 +1,19 @@
 <!-- sldsValidatorIgnore -->
 <!-- sldsValidatorIgnoreNextLine -->
 <template>
-    <lightning-datatable data={Opportunities.data} columns={column} show-row-number-column="false" key-field="id"></lightning-datatable>
+    <lightning-card>
+        <lightning-tabset class="slds-m-around_large slds-p-around_medium">
+            <lightning-tab label="Opportunity">
+                <button onclick={CreateOpportunity}>Create New Opportunity</button>
+                <lightning-datatable data={Opportunities.data} columns={columnOpportunity} onrowaction={RowAction} show-row-number-column="false" key-field="id"></lightning-datatable>
+                <template if:true={Opportunities.error}>
+                    {Opportunities.error}
+                </template>
+            </lightning-tab>
+            <lightning-tab label="Contact">
+                <button onclick={CreateContact}>Create New Contact</button>
+                <lightning-datatable data={Contacts.data} columns={columnContact} onrowaction={RowAction} key-field="id" show-row-number-column="false"></lightning-datatable>
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
 </template>

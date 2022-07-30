@@ -1,15 +1,17 @@
 <apex:page showHeader="false" sidebar="false">
-    <apex:includeLightning />
-    <div id="LightningComponentid" />
+    <!-- <apex:includeLightning /> -->
+    <div id="LightningComponentid">
+        Hi There
+    </div>
     <script>
-    $Lightning.use("c:SiteApp", function() {
-        $Lightning.createComponent("c:lightningDataTable",
-          {
-          },
-          "LightningComponentid",
-          function(cmp) {
-             console.log('Display Lightning component in visualforce page');
-          });
-    });
+    // $Lightning.use("c:SiteApp", function() {
+    //     $Lightning.createComponent("c:lightningDataTable",
+    //       {
+    //       },
+    //       "LightningComponentid",
+    //       function(cmp) {
+    //          console.log('Display Lightning component in visualforce page');
+    //       });
+    // });
     </script>
 </apex:page>
