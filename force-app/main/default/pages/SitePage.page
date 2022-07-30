@@ -1,11 +1,15 @@
-<apex:page sidebar="false" controller="OpportunityControllerVFPage" cache="false">
-    <apex:form>
-        <apex:pageBlock>
-            <apex:pageBlockTable value="{!OppLis}" var="opp" >
-                <apex:column value="{!opp.Name}"/>
-                <apex:column value="{!opp.StageName}"/>
-                <apex:column value="{!opp.Closedate}" />
-            </apex:pageBlockTable>
-        </apex:pageBlock>
-    </apex:form>
+<apex:page showHeader="false" sidebar="false">
+    <apex:includeLightning />
+    <div id="LightningComponentid" />
+    <script>
+    $Lightning.use("c:SiteApp", function() {
+        $Lightning.createComponent("c:lightningDataTable",
+          {
+          },
+          "LightningComponentid",
+          function(cmp) {
+             console.log('Display Lightning component in visualforce page');
+          });
+    });
+    </script>
 </apex:page>
