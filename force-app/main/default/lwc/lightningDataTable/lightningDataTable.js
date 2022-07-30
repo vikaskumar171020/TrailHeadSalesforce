@@ -25,40 +25,4 @@ export default class LightningDataTable extends NavigationMixin(LightningElement
     Opportunities;
     UpdatedValues=[];
     column = column;
-    handleRowAction(event){
-        console.log(event.detail);
-    }
-
-    async handleSave(event){
-        this.UpdatedValues = event.detail.draftValues;
-        const records = this.UpdatedValues.slice().map((draftValues) => {
-            const fields = Object.assign({},draftValues);
-            return fields;
-        });
-        this.UpdatedValues = [];
-        try {
-            const recordUpdatePromise = records.map((record) => updateRecord(record));
-            await Promise.all(recordUpdatePromise);
-            this.dispatchEvent (
-                new ShowToastEvent({
-                    title : "Success",
-                    message : "Record Updated",
-                    varient : "success"
-                })
-            );
-            await refreshApex(this.Opportunities);
-        } catch (error) {
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: 'Error updating or reloading contacts',
-                    message: error.body.message,
-                    variant: 'error'
-                })
-            );
-        }
-    }
-
-    async refresh(){
-        await refreshApex(this.Opportunities);
-    }
 }
