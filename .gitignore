@@ -38,4 +38,4 @@ $RECYCLE.BIN/
 
 # Local environment variables
 .env
-# **/scripts/
+**/scripts/
